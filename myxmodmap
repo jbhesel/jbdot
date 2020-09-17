@@ -1,0 +1,19 @@
+! start with xmodmap .mykeyboard
+! setxkmap to return to normal
+
+! remove Caps Lock
+clear lock
+remove Lock = Caps_Lock
+remove Shift = Caps_Lock
+! add Mode_switch   AltGr to CapsKey
+keycode 66 = NoSymbol NoSymbol
+keycode 66 = Mode_switch
+
+keysym u = u U BackSpace  NoSymbol NoSymbol NoSymbol
+keysym h = h H Escape     NoSymbol NoSymbol NoSymbol
+keysym j = j J Left       NoSymbol NoSymbol NoSymbol
+keysym k = k K Down       NoSymbol NoSymbol NoSymbol
+keysym l = l L Right      NoSymbol lstroke Lstroke
+keysym i = i I Up         NoSymbol NoSymbol NoSymbol
+
+
