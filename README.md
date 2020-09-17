@@ -1,1 +1,28 @@
 # jbdot
+
+## Keybindings in this file
+
+ - <space>g  Execute cursorline in shell
+
+## Configuration of my ubuntu machine in different layers
+
+ - keyboard  CapsLock, Cursorkeys
+ - windowmanager i3
+ - shell zsh
+ - editor neovim
+ - filemanager ranger
+ - programming in coffeescript
+ - markdown and preview
+
+## Windowmanager
+
+I use i3 as windowmanager. The configuration path is in ../.config/i3/config
+
+    !cp ../.config/i3/config .
+    
+I made a programm that extracts the keybindings
+
+    !coffee map_i3.coffee
+
+The result is in i3_keybind.md
+This table is also appended to the original config File.
