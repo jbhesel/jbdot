@@ -1,4 +1,9 @@
 # Where are the config-files
-  - ../.config/i3/config 
-  - ../.config/nvim/init.vim
-  - ../.zshrc
+
+ path                       |comment
+ ----                       |----
+  ~/.config/i3/config       |i3-window-manager
+  ~/.config/nvim/init.vim   |neovim
+  ~/.config/sxhkd/sxhkdrc   |keyboard mapping
+  ~/.zshrc                  |z-shell
+  ~/.config/ranger/rc.conf  |ranger file-manager

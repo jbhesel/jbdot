@@ -10,6 +10,7 @@
  - filemanager ranger
  - programming in coffeescript
  - markdown and preview
+ - browser chromium with vimium
 
 ## Windowmanager
 
@@ -27,5 +28,7 @@ This table is also appended to the original config File.
 ## Keybindings in this file
 
 Commands from my vim configuration, that I sometimes not remember, but are usefull in this file:
+
+ls -l
 
  - <space>g  Execute cursorline in shell

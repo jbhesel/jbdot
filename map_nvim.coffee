@@ -1,8 +1,8 @@
 #!/usr/local/bin/coffee
-""" show Keybindings of i3
-Read the config of i3 and make a table of used key-bindings
+""" show Keybindings of neovim
+Read the config of neovim and make a table of used key-bindings
 
-#i3 keyboard table(36)
+#neovim-keyboard-table
 key                 |Normal            |Shift
 ---                 |---               |---
 XF86AudioRaiseVolume|volume+           |-
@@ -31,19 +31,14 @@ writeIfNew = (filename, content) ->
     console.log 'writing new ', filename
     filename.write content # write new content to file
 
-readConfig = (i3_text) ->
+readConfig = (filename) ->
     # build a hash of key -> function of every definition in the i3-config
+    content = filename.read()
     lastcomment = ''
-    arr = _.compact _.map i3_text.split(NL), (row) ->
+    arr = _.compact _.map content.split(NL), (row) ->
         [cmd, key, text1, text2] = row.split ' '
-        # normally the command is uses as comment, but if we need another text
-        # we can preceed the command with a line starting with #!
-        """ in this example, 'new terminal" is the text
-        #! new terminal
-        bindsym $mod+Return exec i3-sensible-terminal
-        """
         lastcomment = row if cmd is '#!'
-        return unless cmd is 'bindsym'
+        return unless cmd is 'nmap'
         text = text1 + ' ' + (text2 or '')
         text = lastcomment[3..] if lastcomment.startsWith '#!'
         lastcomment = ''
@@ -51,6 +46,8 @@ readConfig = (i3_text) ->
         key: key
         text: text
     #qsx.pex console.log md arr, maxrow:9
+
+qsx.pex readConfig "../.config/nvim/init.vim"
 readConfigMd = """
 key           |text
 ---           |---

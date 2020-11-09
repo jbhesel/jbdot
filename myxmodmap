@@ -1,5 +1,9 @@
-! start with xmodmap .mykeyboard
-! setxkmap to return to normal
+! [xmodmap - ArchWiki](https://wiki.archlinux.org/index.php/Xmodmap)
+! xmodmap myxmodmap  # sets this keymap
+! setxkmap           # return to normal
+! xmodmap -pke       # show keymap
+! setxkbmap; xmodmap ~/jbdot/myxmodmap # restart
+! see xmodmap.coffee
 
 ! remove Caps Lock
 clear lock
@@ -8,12 +12,30 @@ remove Shift = Caps_Lock
 ! add Mode_switch   AltGr to CapsKey
 keycode 66 = NoSymbol NoSymbol
 keycode 66 = Mode_switch
-
-keysym u = u U BackSpace  NoSymbol NoSymbol NoSymbol
-keysym h = h H Escape     NoSymbol NoSymbol NoSymbol
-keysym j = j J Left       NoSymbol NoSymbol NoSymbol
-keysym k = k K Down       NoSymbol NoSymbol NoSymbol
-keysym l = l L Right      NoSymbol lstroke Lstroke
-keysym i = i I Up         NoSymbol NoSymbol NoSymbol
-
-
+keysym w = w W quotedbl 1 2 
+keysym e = e E bracketleft NoSymbol NoSymbol 
+keysym r = r R bracketright NoSymbol NoSymbol 
+keysym t = t T asciitilde NoSymbol NoSymbol 
+keysym z = z Z slash NoSymbol NoSymbol 
+keysym u = u U BackSpace NoSymbol 7 
+keysym i = i I Up Next 8 
+keysym o = o O Insert Delete 9 
+keysym p = p P equal NoSymbol NoSymbol 
+keysym h = h H Escape NoSymbol period 
+keysym j = j J Left Home 4 
+keysym k = k K Down Prior 5 
+keysym l = l L Right End 6 
+keysym odiaeresis = odiaeresis Odiaeresis colon NoSymbol colon 
+keysym a = a A backslash NoSymbol NoSymbol 
+keysym s = s S slash NoSymbol NoSymbol 
+keysym d = d D braceleft NoSymbol NoSymbol 
+keysym f = f F braceright NoSymbol NoSymbol 
+keysym g = g G bar NoSymbol NoSymbol 
+keysym c = c C parenleft NoSymbol NoSymbol 
+keysym v = v V parenright NoSymbol NoSymbol 
+keysym b = b B less NoSymbol NoSymbol 
+keysym n = n N greater NoSymbol 0 
+keysym m = m M Return NoSymbol 1 
+keysym comma = comma semicolon Delete NoSymbol 2 
+keysym period = period colon period NoSymbol 3 
+keysym space = space apostrophe quotedbl NoSymbol 0 

@@ -1,0 +1,40 @@
+! [xmodmap - ArchWiki](https://wiki.archlinux.org/index.php/Xmodmap)
+! start with xmodmap myxmodmap
+! setxkmap to return to normal
+! restart
+!     setxkbmap; xmodmap ~/jbdot/myxmodmap
+!     
+!
+! show keymap
+!     xmodmap -pke
+
+! remove Caps Lock
+clear lock
+remove Lock = Caps_Lock
+remove Shift = Caps_Lock
+! add Mode_switch   AltGr to CapsKey
+keycode 66 = NoSymbol NoSymbol
+keycode 66 = Mode_switch
+
+keysym u = u U BackSpace    NoSymbol  NoSymbol NoSymbol
+keysym h = h H Escape       NoSymbol  NoSymbol NoSymbol
+keysym j = j J Left         NoSymbol  NoSymbol NoSymbol
+keysym k = k K Down         NoSymbol  NoSymbol NoSymbol
+keysym l = l L Right        NoSymbol  lstroke Lstroke
+keysym i = i I Up           NoSymbol  NoSymbol NoSymbol
+keysym a = a A backslash    NoSymbol  NoSymbol NoSymbol
+keysym s = s S slash        NoSymbol  NoSymbol NoSymbol
+keysym e = e E bracketleft  NoSymbol  NoSymbol NoSymbol
+keysym r = r R bracketright NoSymbol  NoSymbol NoSymbol
+keysym d = d D braceleft    NoSymbol  NoSymbol NoSymbol
+keysym f = f F braceright   NoSymbol  dstroke ordfeminine
+keysym g = g G bar          NoSymbol  
+keysym w = w W quotedbl     NoSymbol  NoSymbol NoSymbol
+keysym odiaeresis = odiaeresis Odiaeresis apostrophe  NoSymbol  NoSymbol NoSymbol
+keysym comma = comma semicolon parenright    NoSymbol  NoSymbol NoSymbol
+keysym m = m M parenleft   NoSymbol  NoSymbol NoSymbol
+
+
+
+
+

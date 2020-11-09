@@ -1,5 +1,5 @@
 
-#i3-keybind-table use with Win(36)
+#i3-keybind-table use with Win(39)
 key                 |Normal            |Shift
 ---                 |---               |---
 XF86AudioRaiseVolume|volume+           |-
@@ -31,8 +31,11 @@ h                   |split h           |-
 j                   |focus left        |move left
 k                   |focus down        |move down
 l                   |focus right       |move right
+x                   |ranger            |-
 c                   |-                 |reload configuration file
 v                   |split v           |-
+n                   |nvim              |-
+m                   |spotify           |-
 Print               |screenshot focused|screenshot select
 Up                  |focus up          |move up
 Left                |focus left        |move left
